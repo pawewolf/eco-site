@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Школьная теплица – КГУ ОШ №12</title>
+    <title>Экология и Школа</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #e8f5e9;
-            text-align: center;
         }
         header {
             background: #2e7d32;
             color: white;
             padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
+            text-align: center;
         }
         nav {
             display: flex;
@@ -37,74 +35,87 @@
         nav a:hover {
             background: #a5d6a7;
         }
-        section {
+        .content {
             padding: 20px;
             max-width: 800px;
             margin: auto;
             background: white;
-            margin-top: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        img {
-            max-width: 100%;
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
             border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <header>Школьная теплица – КГУ ОШ №12</header>
+    <header>Экология и Школа</header>
     <nav>
-        <a href="#about">О проекте</a>
-        <a href="#importance">Значение теплицы</a>
-        <a href="#education">Образовательная роль</a>
-        <a href="#results">Ожидаемые результаты</a>
-        <a href="#gallery">Галерея</a>
+        <a href="#" onclick="openModal('about')">О проекте</a>
+        <a href="#" onclick="openModal('structure')">Устройство теплицы</a>
+        <a href="#" onclick="openModal('greens')">Значение зелени</a>
+        <a href="#" onclick="openModal('landscaping')">Озеленение</a>
     </nav>
-    <section id="about">
-        <h2>О проекте</h2>
-        <p>КГУ "Общеобразовательная школа №12" активно занимается развитием экологического образования. Одним из ключевых направлений является создание и использование школьной теплицы, которая служит не только учебной лабораторией, но и местом для практической деятельности учащихся.</p>
-        <p>В рамках проекта ученики изучают основы растениеводства, агротехнику, экологию и сельское хозяйство. Это помогает формировать ответственное отношение к природе и учит работать в команде.</p>
-        <img src="https://source.unsplash.com/800x400/?greenhouse,plants" alt="Теплица">
-    </section>
-    <section id="importance">
-        <h2>Значение теплицы</h2>
-        <p>Современные технологии позволяют выращивать овощи и зелень круглый год, но природные условия остаются важным фактором. Школьная теплица помогает создать комфортную среду для растений, защищая их от резких изменений температуры и неблагоприятных погодных условий.</p>
-        <p>Благодаря теплице школа получает возможность:</p>
-        <ul>
-            <li>Выращивать свежие овощи и зелень для школьной столовой.</li>
-            <li>Использовать растения для озеленения школьного двора.</li>
-            <li>Привлекать учеников к экологическим и трудовым проектам.</li>
-        </ul>
-        <img src="https://source.unsplash.com/800x400/?vegetables,gardening" alt="Овощи в теплице">
-    </section>
-    <section id="education">
-        <h2>Образовательная роль</h2>
-        <p>Теплица – это живая лаборатория, где школьники изучают природные процессы, агротехнику и биологию на практике. Это способствует более глубокому усвоению знаний и развитию исследовательских навыков.</p>
-        <p>Ученики могут:</p>
-        <ul>
-            <li>Проводить эксперименты по влиянию удобрений и условий роста.</li>
-            <li>Изучать микроклимат и особенности выращивания различных культур.</li>
-            <li>Получать навыки ухода за растениями и работы с почвой.</li>
-        </ul>
-        <img src="https://source.unsplash.com/800x400/?students,learning" alt="Ученики изучают растения">
-    </section>
-    <section id="results">
-        <h2>Ожидаемые результаты</h2>
-        <p>Проект "Школьная теплица" принесёт значительные преимущества как для учеников, так и для всей школы:</p>
-        <ul>
-            <li>Повышение уровня знаний в области экологии и сельского хозяйства.</li>
-            <li>Развитие практических навыков и ответственности у учащихся.</li>
-            <li>Обеспечение школы экологически чистыми продуктами.</li>
-            <li>Создание зелёных зон и цветников на территории школы.</li>
-        </ul>
-        <img src="https://source.unsplash.com/800x400/?school,garden" alt="Школьный сад">
-    </section>
-    <section id="gallery">
-        <h2>Галерея</h2>
-        <p>Здесь будут размещены фотографии работы теплицы, роста растений и участия учеников в проекте.</p>
-        <img src="https://source.unsplash.com/800x400/?flowers,growth" alt="Цветы в теплице">
-    </section>
+    
+    <div id="about" class="modal">
+        <div class="modal-content">
+            <h2>О проекте</h2>
+            <p>Проект создан для улучшения экологии и развития практических навыков у школьников. Работа в теплице помогает изучать растениеводство и агротехнику.</p>
+            <button onclick="closeModal('about')">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="structure" class="modal">
+        <div class="modal-content">
+            <h2>Устройство теплицы</h2>
+            <p>Теплица представляет собой арочную конструкцию с каркасом из алюминия и дерева, покрытую прозрачным полипропиленом.</p>
+            <button onclick="closeModal('structure')">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="greens" class="modal">
+        <div class="modal-content">
+            <h2>Значение зелени</h2>
+            <p>Зелёные растения важны для улучшения воздуха, создания благоприятной экологической среды и получения свежих продуктов.</p>
+            <button onclick="closeModal('greens')">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="landscaping" class="modal">
+        <div class="modal-content">
+            <h2>Озеленение пришкольной территории</h2>
+            <p>Озеленение улучшает внешний вид школы и помогает учащимся изучать растения и их выращивание.</p>
+            <button onclick="closeModal('landscaping')">Закрыть</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
 </body>
 </html>
