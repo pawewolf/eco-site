@@ -8,74 +8,74 @@
 </head>
 <body>
     <header>
-        <h1>Зелёный уголок знаний</h1>
-        <p>Экология, осознанность, знания</p>
+        <div class="container">
+            <h1>Зелёный уголок знаний</h1>
+            <p>Экология, осознанность, знания</p>
+            <nav>
+                <a href="#about">О нас</a>
+                <a href="#projects">Проекты</a>
+                <a href="#benefits">Преимущества</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <button onclick="openModal('parliament')">Школьный парламент</button>
-        <button onclick="openModal('fractions')">Фракции парламента</button>
-        <button onclick="openModal('greenhouse')">Польза теплицы</button>
-        <button onclick="openModal('structure')">Устройство теплицы</button>
-        <button onclick="openModal('plants')">Значение зелени</button>
-        <button onclick="openModal('greening')">Озеленение школы</button>
-    </nav>
-
-    <section class="background">
-        <div class="overlay"></div>
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <img src="https://source.unsplash.com/800x400/?nature,forest" alt="Природа">
+            <p>Наш проект направлен на развитие экологической грамотности и осознанного отношения к окружающей среде. Мы проводим лекции, создаем экологические проекты и помогаем школам стать "зелёными".</p>
+        </div>
     </section>
 
-    <!-- Всплывающие окна -->
-    <div id="parliament" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('parliament')">&times;</span>
-            <h2>Школьный парламент</h2>
-            <p>Парламент — это креатив, молодежный подход, проекты и акции!</p>
+    <section id="projects">
+        <div class="container">
+            <h2>Наши проекты</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?greenhouse" alt="Теплица">
+                    <h3>Школьные теплицы</h3>
+                    <p>Создаём экологические теплицы для школ, где дети учатся выращивать растения и ухаживать за природой.</p>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?solar,energy" alt="Солнечная энергия">
+                    <h3>Энергия солнца</h3>
+                    <p>Мы устанавливаем солнечные панели в школах, обучая детей принципам возобновляемой энергетики.</p>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?education,school" alt="Экологическое образование">
+                    <h3>Экологическое образование</h3>
+                    <p>Организуем лекции, мастер-классы и мероприятия для повышения экологической осознанности.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="fractions" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('fractions')">&times;</span>
-            <h2>Фракции парламента</h2>
-            <p>Каждая фракция занимается своим направлением.</p>
+    <section id="benefits">
+        <div class="container">
+            <h2>Почему это важно?</h2>
+            <p>Экологическая осознанность – ключ к здоровой планете. Вот основные причины, почему мы должны заботиться о природе:</p>
+            <ul>
+                <li>Сохранение природных ресурсов</li>
+                <li>Чистый воздух и вода</li>
+                <li>Уменьшение количества отходов</li>
+                <li>Развитие экологически устойчивых технологий</li>
+            </ul>
         </div>
-    </div>
+    </section>
 
-    <div id="greenhouse" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('greenhouse')">&times;</span>
-            <h2>Польза теплицы</h2>
-            <p>Теплица помогает изучать агротехнику и улучшает экосознание.</p>
+    <section id="contacts">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <p>Если у вас есть вопросы или идеи для сотрудничества, напишите нам:</p>
+            <a href="mailto:info@greenknowledge.com" class="button">Написать нам</a>
         </div>
-    </div>
+    </section>
 
-    <div id="structure" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('structure')">&times;</span>
-            <h2>Устройство теплицы</h2>
-            <p>Арочная конструкция 5×10 м с грядками и проходом.</p>
+    <footer>
+        <div class="container">
+            <p>© 2025 Зелёный уголок знаний. Все права защищены.</p>
         </div>
-    </div>
-
-    <div id="plants" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('plants')">&times;</span>
-            <h2>Значение зелени</h2>
-            <p>Растения улучшают воздух, создают уют и украшают территорию.</p>
-        </div>
-    </div>
-
-    <div id="greening" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('greening')">&times;</span>
-            <h2>Озеленение школы</h2>
-            <p>Озеленение помогает обучению детей и делает школу красивее.</p>
-        </div>
-    </div>
-
-    <button id="scrollTop" onclick="scrollToTop()">⬆️</button>
-
-    <script src="script.js"></script>
+    </footer>
 </body>
 </html>
