@@ -3,119 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Экология и Школа</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e8f5e9;
-        }
-        header {
-            background: #2e7d32;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #66bb6a;
-            padding: 10px;
-        }
-        nav a {
-            text-decoration: none;
-            margin: 10px;
-            padding: 10px 15px;
-            background: white;
-            color: #2e7d32;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            background: #a5d6a7;
-        }
-        .content {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 800px;
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <title>Зелёный уголок знаний</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>Экология и Школа</header>
+    <header>
+        <h1>Зелёный уголок знаний</h1>
+        <p>Экология, осознанность, знания</p>
+    </header>
+
     <nav>
-        <a href="#" onclick="openModal('about')">О проекте</a>
-        <a href="#" onclick="openModal('structure')">Устройство теплицы</a>
-        <a href="#" onclick="openModal('greens')">Значение зелени</a>
-        <a href="#" onclick="openModal('landscaping')">Озеленение</a>
+        <button onclick="openModal('parliament')">Школьный парламент</button>
+        <button onclick="openModal('fractions')">Фракции парламента</button>
+        <button onclick="openModal('greenhouse')">Польза теплицы</button>
+        <button onclick="openModal('structure')">Устройство теплицы</button>
+        <button onclick="openModal('plants')">Значение зелени</button>
+        <button onclick="openModal('greening')">Озеленение школы</button>
     </nav>
-    
-    <div id="about" class="modal">
+
+    <section class="background">
+        <div class="overlay"></div>
+    </section>
+
+    <!-- Всплывающие окна -->
+    <div id="parliament" class="modal">
         <div class="modal-content">
-            <h2>О проекте</h2>
-            <p>Проект создан для улучшения экологии и развития практических навыков у школьников. Работа в теплице помогает изучать растениеводство и агротехнику.</p>
-            <button onclick="closeModal('about')">Закрыть</button>
+            <span class="close" onclick="closeModal('parliament')">&times;</span>
+            <h2>Школьный парламент</h2>
+            <p>Парламент — это креатив, молодежный подход, проекты и акции!</p>
+        </div>
+    </div>
+
+    <div id="fractions" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('fractions')">&times;</span>
+            <h2>Фракции парламента</h2>
+            <p>Каждая фракция занимается своим направлением.</p>
+        </div>
+    </div>
+
+    <div id="greenhouse" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('greenhouse')">&times;</span>
+            <h2>Польза теплицы</h2>
+            <p>Теплица помогает изучать агротехнику и улучшает экосознание.</p>
         </div>
     </div>
 
     <div id="structure" class="modal">
         <div class="modal-content">
+            <span class="close" onclick="closeModal('structure')">&times;</span>
             <h2>Устройство теплицы</h2>
-            <p>Теплица представляет собой арочную конструкцию с каркасом из алюминия и дерева, покрытую прозрачным полипропиленом.</p>
-            <button onclick="closeModal('structure')">Закрыть</button>
+            <p>Арочная конструкция 5×10 м с грядками и проходом.</p>
         </div>
     </div>
 
-    <div id="greens" class="modal">
+    <div id="plants" class="modal">
         <div class="modal-content">
+            <span class="close" onclick="closeModal('plants')">&times;</span>
             <h2>Значение зелени</h2>
-            <p>Зелёные растения важны для улучшения воздуха, создания благоприятной экологической среды и получения свежих продуктов.</p>
-            <button onclick="closeModal('greens')">Закрыть</button>
+            <p>Растения улучшают воздух, создают уют и украшают территорию.</p>
         </div>
     </div>
 
-    <div id="landscaping" class="modal">
+    <div id="greening" class="modal">
         <div class="modal-content">
-            <h2>Озеленение пришкольной территории</h2>
-            <p>Озеленение улучшает внешний вид школы и помогает учащимся изучать растения и их выращивание.</p>
-            <button onclick="closeModal('landscaping')">Закрыть</button>
+            <span class="close" onclick="closeModal('greening')">&times;</span>
+            <h2>Озеленение школы</h2>
+            <p>Озеленение помогает обучению детей и делает школу красивее.</p>
         </div>
     </div>
 
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = 'flex';
-        }
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-    </script>
+    <button id="scrollTop" onclick="scrollToTop()">⬆️</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
