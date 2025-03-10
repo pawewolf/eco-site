@@ -9,10 +9,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/03/20/leaves-1869167_1280.jpg'); /* Фон */
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWR7Q0Fjyi7QRoKkHMkOswTlVAkBfWuPwOIg&s');
             background-size: cover;
             background-attachment: fixed;
-            background-position: center;
             color: #333;
         }
         header {
@@ -40,7 +39,7 @@
             width: 90%;
             max-width: 1000px;
             margin: 20px auto;
-            background: rgba(255, 255, 255, 0.9);
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,15 +52,21 @@
             border-radius: 10px;
             margin-top: 10px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        .scrollTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            border: none;
         }
-        ul li {
-            background: #C8E6C9;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
+        .scrollTop:hover {
+            background: #388E3C;
         }
     </style>
 </head>
@@ -84,56 +89,51 @@
     <div class="container">
         <section id="about">
             <h2>Экология</h2>
-            <p>Экология — это наука о взаимоотношениях живых организмов между собой и с окружающей средой.</p>
-            <img src="https://cdn.pixabay.com/photo/2016/09/04/12/05/earth-1642972_1280.jpg" alt="Планета Земля">
-        </section>
-    </div>
-
-    <div class="container">
-        <section id="parliament">
-            <h2>Школьный парламент</h2>
-            <p>Школьный парламент — это орган ученического самоуправления, состоящий из разных фракций.</p>
-            <img src="https://cdn.pixabay.com/photo/2016/10/22/16/28/hand-1768845_1280.jpg" alt="Команда школьников">
-        </section>
-    </div>
-
-    <div class="container">
-        <section id="fractions">
-            <h2>Фракции школьного парламента</h2>
-            <ul>
-                <li><b>Экология и Труд:</b> Озеленение, создание теплицы.</li>
-                <li><b>Право и Порядок:</b> Контроль за соблюдением школьных правил.</li>
-                <li><b>Спорт и ЗОЖ:</b> Организация спортивных мероприятий.</li>
-                <li><b>Патриотизм:</b> Воспитание уважения к своей стране.</li>
-                <li><b>Волонтерство:</b> Помощь нуждающимся.</li>
-            </ul>
-            <img src="https://cdn.pixabay.com/photo/2016/03/05/20/02/hands-1231365_1280.jpg" alt="Руки вместе">
+            <p>В современном мире вопросы экологии становятся всё более важными...</p>
+            <img src="https://source.unsplash.com/800x400/?nature,forest" alt="Природа">
         </section>
     </div>
 
     <div class="container">
         <section id="greenhouse">
             <h2>Польза теплицы</h2>
-            <p>Для школы: Экологическое обучение, изучение растений.</p>
-            <img src="https://cdn.pixabay.com/photo/2020/04/24/09/55/greenhouse-5086915_1280.jpg" alt="Теплица">
+            <p>Для школы: Экологическое обучение...</p>
+            <img src="https://source.unsplash.com/800x400/?greenhouse" alt="Теплица">
         </section>
     </div>
 
     <div class="container">
         <section id="structure">
             <h2>Устройство теплицы</h2>
-            <p>Теплица имеет размеры 5×10 м и полукруглую форму. Каркас состоит из алюминиевого профиля и дерева.</p>
-            <img src="https://cdn.pixabay.com/photo/2022/08/09/07/48/greenhouse-7373809_1280.jpg" alt="Схема теплицы">
+            <p>Теплица имеет размеры 5×10 м...</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXv00fQo3uUPo1RSe5A4J8wSoKgQ0_Vd4Lmg&s" alt="Устройство теплицы">
         </section>
     </div>
 
     <div class="container">
         <section id="plants">
             <h2>Значение зелени</h2>
-            <p>Растения играют важную роль в улучшении качества воздуха и создании благоприятного микроклимата.</p>
-            <img src="https://cdn.pixabay.com/photo/2016/11/29/03/43/green-1869132_1280.jpg" alt="Зеленые листья">
+            <p>Растения играют важную роль...</p>
+            <img src="https://avatars.mds.yandex.net/i?id=90d6618411da5856d9d304eada3e0b11_l-2938367-images-thumbs&n=13" alt="Польза зелени">
         </section>
     </div>
+
+    <button class="scrollTop" onclick="scrollToTop()">▲</button>
+
+    <script>
+        window.onscroll = function() {
+            var scrollButton = document.querySelector(".scrollTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 
 </body>
 </html>
