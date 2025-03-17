@@ -1,29 +1,30 @@
-function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-}
-
-function closeModal(id) {
-    document.getElementById(id).style.display = 'none';
-}
-
-window.onclick = function(event) {
-    let modals = document.getElementsByClassName('modal');
-    for (let modal of modals) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    }
-};
-
+// Плавный скролл к верху страницы
 window.onscroll = function() {
-    let scrollBtn = document.getElementById('scrollTop');
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = 'block';
+    var scrollButton = document.querySelector(".scrollTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollButton.style.display = "block";
     } else {
-        scrollBtn.style.display = 'none';
+        scrollButton.style.display = "none";
     }
 };
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+// Анимация появления блоков
+document.addEventListener("DOMContentLoaded", function() {
+    let sections = document.querySelectorAll(".fade-in");
+
+    function showSections() {
+        sections.forEach(section => {
+            let rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", showSections);
+    showSections();
+});
