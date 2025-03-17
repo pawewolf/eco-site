@@ -4,17 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зелёный уголок знаний</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWR7Q0Fjyi7QRoKkHMkOswTlVAkBfWuPwOIg&s');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #388E3C;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2E7D32;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .scrollTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            border: none;
+        }
+        .scrollTop:hover {
+            background: #388E3C;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="fade-in">
+    <header>
         <h1>Зелёный уголок знаний</h1>
         <p>Экологический проект для школьников</p>
     </header>
 
-    <nav class="fade-in">
+    <nav>
         <a href="#about">Экология</a>
         <a href="#parliament">Школьный парламент</a>
         <a href="#fractions">Фракции</a>
@@ -23,25 +86,54 @@
         <a href="#plants">Значение зелени</a>
     </nav>
 
-    <div class="container fade-in">
+    <div class="container">
         <section id="about">
             <h2>Экология</h2>
-            <p>Экология — это наука о взаимодействиях живых организмов с окружающей средой...</p>
-            <img src="images/forest.jpg" alt="Природа">
+            <p>Экология — это наука о взаимодействиях живых организмов с окружающей средой и друг с другом. В последние десятилетия тема экологии стала одной из важнейших для человечества. Загрязнение воздуха, воды и почвы, вырубка лесов, изменение климата — все эти проблемы требуют немедленного решения. Важнейшая задача — это воспитывать экологическую культуру у молодёжи. Именно в школьном возрасте формируются привычки, которые будут определять отношение человека к природе на протяжении всей жизни. Создание теплицы на территории школы — это один из примеров практического экологического образования, который позволяет школьникам не только изучать теорию, но и применять её на практике.</p>
+            <img src="https://source.unsplash.com/800x400/?nature,forest" alt="Природа">
         </section>
     </div>
 
-    <div class="container fade-in">
+    <div class="container">
         <section id="greenhouse">
             <h2>Польза теплицы</h2>
-            <p>Теплица на территории школы — это уникальный проект, который несёт множество преимуществ...</p>
-            <img src="images/greenhouse.jpg" alt="Теплица">
+            <p>Теплица на территории школы — это уникальный проект, который несёт множество преимуществ. Во-первых, она служит учебным полигоном для уроков биологии, экологии и даже технологии. Здесь учащиеся могут изучать процесс роста растений, их анатомию и условия, необходимые для их нормального развития. Во-вторых, теплица позволяет школьникам развивать практические навыки, такие как посадка, уход и сбор урожая. Эти навыки будут полезны не только в учебе, но и в повседневной жизни. В-третьих, теплица способствует озеленению территории школы и улучшению микроклимата. Зелёные насаждения очищают воздух и создают благоприятные условия для отдыха и учёбы. В-четвёртых, выращенные овощи и зелень могут использоваться в школьной столовой, что способствует улучшению питания учащихся.</p>
+            <img src="https://source.unsplash.com/800x400/?greenhouse" alt="Теплица">
+        </section>
+    </div>
+
+    <div class="container">
+        <section id="structure">
+            <h2>Устройство теплицы</h2>
+            <p>Наша теплица представляет собой сооружение размером 5×10 метров и высотой 2,5 метра. Каркас выполнен из алюминиевого профиля и дерева, что обеспечивает прочность и долговечность конструкции. Покрытие сделано из плотного прозрачного полипропилена, который обеспечивает максимальную освещённость растений при сохранении тепла. В теплице предусмотрена дверь для удобного входа и выхода, а также вентиляционные отверстия для регулирования температуры и влажности внутри. Всё это позволяет поддерживать оптимальные условия для роста зелени и овощей в любое время года.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXv00fQo3uUPo1RSe5A4J8wSoKgQ0_Vd4Lmg&s" alt="Устройство теплицы">
+        </section>
+    </div>
+
+    <div class="container">
+        <section id="plants">
+            <h2>Значение зелени</h2>
+            <p>Растения играют ключевую роль в экосистемах нашей планеты. Они очищают воздух, производят кислород, необходимый для дыхания, и обеспечивают пищу для множества видов животных, включая человека. В условиях школы зелёные насаждения также помогают улучшить микроклимат, делая воздух более свежим и насыщенным кислородом. Зелень, выращиваемая в теплице, может использоваться в образовательных целях, для улучшения питания учащихся и даже для реализации социальных проектов, направленных на улучшение экологической обстановки в городе.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=90d6618411da5856d9d304eada3e0b11_l-2938367-images-thumbs&n=13" alt="Польза зелени">
         </section>
     </div>
 
     <button class="scrollTop" onclick="scrollToTop()">▲</button>
 
-    <script src="js/script.js"></script>
+    <script>
+        window.onscroll = function() {
+            var scrollButton = document.querySelector(".scrollTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 
 </body>
 </html>
